@@ -25,13 +25,34 @@
       </div>
       <div class="actions">
         <button id="reveal" type="button">Reveal</button>
-        <button id="copy" type="button">Copy</button>
+        <button id="copy" type="button" class="primary">Copy</button>
       </div>
       <p class="muted">Store it somewhere safe and close this tab. Links expire after a few days.</p>
     </section>
 
+    <section id="setup" hidden>
+      <div id="setup-new">
+        <p>RahaCloud can share secrets with you by name. To receive them, create a key in this browser. It is stored here and cannot be copied out, so repeat this on each browser or device you use.</p>
+        <div class="actions">
+          <button id="create" type="button" class="primary">Create my key</button>
+        </div>
+      </div>
+      <div id="setup-done" hidden>
+        <p>This browser has a key. Send the public key below to RahaCloud along with your name. It is safe to share; it can only encrypt, not decrypt.</p>
+        <div class="secret">
+          <pre id="public-key"></pre>
+        </div>
+        <div class="actions">
+          <button id="copy-public" type="button" class="primary">Copy</button>
+          <button id="replace" type="button">Replace key</button>
+        </div>
+        <p class="muted">Replacing the key makes secrets shared with the old one unreadable in this browser.</p>
+      </div>
+    </section>
+
     <section id="error" hidden>
       <p id="error-message"></p>
+      <p id="error-setup" class="muted" hidden><a href="#setup">Set up a key in this browser</a></p>
     </section>
   </main>
 </body>

@@ -80,8 +80,10 @@ button {
   cursor: pointer;
 }
 
-button#copy {
+button.primary {
   background: var(--accent);
   border-color: var(--accent);
   color: var(--accent-fg);
 }
+
+a { color: var(--accent); }
